@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../../Bcs.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\tconst QUERY = `\n\t\tquery {\n\t\t\tpost(slug: \"bcs\") {\n\t\t\t\ttitle\n\t\t\t\tslug\n\t\t\t\thtml\n\t\t\t}\n\t\t}\n\t`;\n\tconst QUERYRES = {\"post\":{\"title\":\"BCS Clients\",\"slug\":\"bcs\",\"html\":\"\",\"__typename\":\"Post\"}};\n\t\n\tconst QUERYPARAMOPTS = `\n\t\tquery {\n\t\t\tposts {\n\t\t\t\tslug\n\t\t\t}\n\t\t}\n\t`;\n\n</script>\n\n<style>\n\tmain {\n\t\ttext-align: center;\n\t\tpadding: 1em;\n\t\tmax-width: 240px;\n\t\tmargin: 0 auto;\n\t}\n\n\t#wrap{\n\t\twidth:max-content;\n\t\tmargin:auto;\n\t}\n\n\th1 {\n\t\ttext-transform: uppercase;\n\t\tfont-size: 4em;\n\t\tfont-weight: 100;\n\t}\n\n\ta {\n\t\tmargin:1rem;\n\t\tfont-size:1.75rem;\n\t\tdisplay:inline-block;\n\n\t}\n\t\n\t@media (min-width: 640px) {\n\t\tmain {\n\t\t\tmax-width: none;\n\t\t}\n    }\n\n</style>\n\n<svelte:head>\n\t<title>bcsStatus - {QUERYRES.post.title}</title>\n</svelte:head>\n\n<main>\n    <h1>{QUERYRES.post.title}</h1>\n\t\t<a href=\"/\">🔙</a>\n\t\t<div id=\"wrap\">\n    \t{@html QUERYRES.post.html}\n\t\t</div>\n</main>"
+  ],
+  "names": [],
+  "mappings": "AAuBC,IAAI,cAAC,CAAC,AACL,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AACf,CAAC,AAED,mBAAK,CAAC,AACL,MAAM,WAAW,CACjB,OAAO,IAAI,AACZ,CAAC,AAED,EAAE,cAAC,CAAC,AACH,cAAc,CAAE,SAAS,CACzB,SAAS,CAAE,GAAG,CACd,WAAW,CAAE,GAAG,AACjB,CAAC,AAED,CAAC,cAAC,CAAC,AACF,OAAO,IAAI,CACX,UAAU,OAAO,CACjB,QAAQ,YAAY,AAErB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AAC1B,IAAI,cAAC,CAAC,AACL,SAAS,CAAE,IAAI,AAChB,CAAC,AACC,CAAC"
+}
